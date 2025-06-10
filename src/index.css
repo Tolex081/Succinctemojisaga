@@ -1,0 +1,270 @@
+/* index.css */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a; /* dark by default */
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Light Theme */
+body.light {
+  background-color: #f9fafb;
+  color: #0f172a;
+}
+
+/* Header and Logo */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically align logo and theme toggle */
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle button {
+  background-color: #5bc0f8;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease-in-out;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem; /* Compact padding for icon-only button */
+}
+
+.theme-toggle button:hover {
+  background-color: #6366f1;
+}
+
+/* Main Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Welcome Emoji */
+.welcome-emoji {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  animation: bounce 1.5s infinite;
+}
+
+/* Username Container */
+.username-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.username-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.username-input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  flex: 1; /* Take available space */
+  min-width: 150px; /* Ensure input doesn't shrink too much */
+}
+
+.username-input:focus {
+  outline: none;
+  border-color: #5bc0f8;
+}
+
+.enter-button {
+  background-color: #8b5cf6;
+  border: none;
+  color: white;
+  padding: 0.75rem 0.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.enter-button:hover {
+  background-color: #5bc0f8;
+}
+
+/* Username Display */
+.username-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #5bc0f8;
+}
+
+/* Difficulty Buttons */
+.difficulty-buttons {
+  display: flex;
+  gap: 1rem; /* Space between Easy and Hard buttons */
+  justify-content: center;
+}
+
+.difficulty-buttons button {
+  width: auto; /* Override width: 100% for difficulty buttons */
+  padding: 0.75rem 2rem; /* Wider padding for better appearance */
+}
+
+/* Input and Buttons */
+input[type="text"] {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #5bc0f8;
+}
+
+button {
+  background-color: #8b5cf6;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #5bc0f8;
+}
+
+button.active {
+  background-color: #5bc0f8; /* Brighter blue for active state */
+  transform: scale(1.05); /* Slight scale for emphasis */
+  border: 2px solid #6366f1; /* Purple border to stand out */
+}
+
+/* Action Buttons (Submit Guess and Try Another Saga) */
+.action-buttons {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.action-buttons button {
+  width: auto; /* Compact buttons */
+  padding: 0.75rem 1.5rem; /* Adjusted padding */
+}
+
+/* Retry Button */
+.retry-button {
+  background-color: #6366f1; /* Purple to differentiate from Submit */
+  color: white;
+}
+
+.retry-button:hover {
+  background-color: #5bc0f8; /* Match other buttons’ hover */
+}
+
+/* Hint Button */
+.hint-button {
+  background-color: #5bc0f8;
+  border: none;
+  color: white;
+  border-radius: 50%; /* Circular for icon */
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0.5rem auto; /* Centered */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hint-button:hover {
+  background-color: #6366f1;
+  transform: scale(1.1);
+}
+
+/* Hint Text */
+.hint-text {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #5bc0f8; /* Blue to stand out */
+  font-style: italic;
+}
+
+/* Card/Box Styling */
+.card {
+  background-color: #1e293b;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 1rem auto;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .card {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* Feedback */
+.feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Emoji Hint */
+.emoji-saga {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Optional Bounce Animation for Welcome Emoji */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
