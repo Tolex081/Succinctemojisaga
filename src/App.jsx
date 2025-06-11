@@ -57,15 +57,15 @@ function normalize(str) {
 // Feedback message templates
 const correctFeedbackMessages = [
   `AHHHHHHHHHHHHHHH! %s, that's a Succinct Summer proof! You cracked "%s" like a ZK wizard! 🔥`,
-  `Brotha man! 💀 %s, you dropped a BANGER! "%s" bows to your SP1 skills! 🚀`,
+  `Brotha man!  %s, you dropped a BANGER! "%s" bows to your SP1 skills! 🚀`,
   `Yinger's hyped, %s! BANGER guess for "%s"! Succinct Summer's ZK vibes are strong with you! 🌟`,
   `👀👀 %s, that's a ZK BANGER! You nailed "%s" like Addy's fast Prover Network! 🔗`,
   `BANG-BANG, %s! Hottest BANGER! "%s" proves you're a ZK genius! ✨`,
   `AHHHHHHHHHHHHHHH! %s, you smashed "%s"! Yinger's calling it a BANGER! 💪`,
   `Mega Banger, %s! 🔥 "%s" got owned! 🎉`,
-  `%s, you're a ZK rockstar! 🌟 "%s" unlocked! Brotha man 💀`,
+  `%s, you're a ZK rockstar! 🌟 "%s" unlocked! Brotha man `,
   `👀👀 BANGER city, %s! "%s" fell to your ZK prowess this Succinct Summer! 🎊`,
-  `Yinger's losing it, %s! That's a BANGER for "%s"! Addy's like, Brotha man 💀! 🥳`
+  `Yinger's losing it, %s! That's a BANGER for "%s"! Addy's like, Brotha man ! 🥳`
 ];
 
 const incorrectFeedbackMessages = [
